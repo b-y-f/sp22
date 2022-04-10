@@ -60,7 +60,7 @@ RUN mamba install --quiet --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN pip install otter-grader
+RUN pip install otter-grader && pip install plotly && pip install ipython-sql
 
 # Install facets which does not have a pip or conda package at the moment
 WORKDIR /tmp
