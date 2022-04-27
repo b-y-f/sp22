@@ -2,8 +2,10 @@ version: '3.0'
 
 services:
   notebook:
-    image: notebook
+    image: jupyter/scipy-notebook
     container_name: Data100-Notebook
+    environment:
+    - JUPYTER_TOKEN=easy
     ports:
       - 8888:8888
     volumes:
